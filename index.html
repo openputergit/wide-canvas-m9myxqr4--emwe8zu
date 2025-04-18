@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayank Agrawal | Portfolio</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://unpkg.com/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --google-green: #008744;
+            --google-blue: #0057e7;
+            --google-red: #d62d20;
+            --google-yellow: #ffa700;
+        }
+
+        * {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .neu-border {
+            border: 3px solid black;
+            box-shadow: 5px 5px 0px black;
+            transition: all 0.3s ease;
+        }
+
+        .neu-border:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 7px 7px 0px black;
+        }
+
+        .project-card {
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: rotate(-2deg);
+        }
+
+        .skill-pill {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .menu-item {
+            transition: all 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: skew(-5deg);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <nav class="fixed w-full bg-white z-50 py-4 border-b-4 border-black">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">MA.</h1>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="menu-item font-semibold hover:text-[var(--google-blue)]">Home</a>
+                <a href="#about" class="menu-item font-semibold hover:text-[var(--google-red)]">About</a>
+                <a href="#work" class="menu-item font-semibold hover:text-[var(--google-yellow)]">Work</a>
+                <a href="#projects" class="menu-item font-semibold hover:text-[var(--google-green)]">Projects</a>
+                <a href="#contact" class="menu-item font-semibold hover:text-[var(--google-blue)]">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen pt-20 flex items-center">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h1 class="text-6xl font-bold mb-4">Hey! I'm <span class="text-[var(--google-blue)]">Mayank</span></h1>
+                    <p class="text-2xl mb-6">17-year-old Software Developer specializing in Android & iOS Development</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="neu-border bg-[var(--google-blue)] text-white px-6 py-3 inline-block">Get in touch</a>
+                        <a href="#projects" class="neu-border bg-white px-6 py-3 inline-block">View Projects</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="neu-border bg-[var(--google-yellow)] h-64 md:h-96 rounded-xl"></div>
+                    <div class="absolute -bottom-4 -right-4 neu-border bg-[var(--google-red)] h-32 w-32 rounded-full"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="min-h-screen py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="neu-border bg-[var(--google-green)] p-6 text-white">
+                    <h3 class="text-2xl font-bold mb-4">Skills & Expertise</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-pill neu-border bg-white text-black px-4 py-2">Android Dev</span>
+                        <span class="skill-pill neu-border bg-white text-black px-4 py-2">iOS Dev</span>
+                        <span class="skill-pill neu-border bg-white text-black px-4 py-2">WordPress</span>
+                        <span class="skill-pill neu-border bg-white text-black px-4 py-2">UX Design</span>
+                        <span class="skill-pill neu-border bg-white text-black px-4 py-2">SEO</span>
+                        <span class="skill-pill neu-border bg-white text-black px-4 py-2">Python</span>
+                        <span class="skill-pill neu-border bg-white text-black px-4 py-2">C++</span>
+                    </div>
+                </div>
+                <div class="neu-border bg-[var(--google-blue)] p-6 text-white">
+                    <h3 class="text-2xl font-bold mb-4">Education</h3>
+                    <p class="text-xl mb-2">B.Tech in AI & ML</p>
+                    <p class="mb-4">GLA University (2024-2028)</p>
+                    <div class="space-y-2">
+                        <div class="neu-border bg-white text-black p-2">Google Cloud Certified</div>
+                        <div class="neu-border bg-white text-black p-2">API Development</div>
+                        <div class="neu-border bg-white text-black p-2">Deep Learning</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="min-h-screen py-20 bg-[var(--google-yellow)]">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12">Work Experience</h2>
+            <div class="space-y-8">
+                <div class="neu-border bg-white p-6">
+                    <h3 class="text-2xl font-bold">GDG GLA University</h3>
+                    <p class="text-lg">Technical Lead</p>
+                </div>
+                <div class="neu-border bg-white p-6">
+                    <h3 class="text-2xl font-bold">Apple</h3>
+                    <p class="text-lg">iOS Developer</p>
+                </div>
+                <div class="neu-border bg-white p-6">
+                    <h3 class="text-2xl font-bold">Google</h3>
+                    <p class="text-lg">Freelance Blogger</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="min-h-screen py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12">Projects</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="project-card neu-border bg-[var(--google-red)] p-6 text-white">
+                    <h3 class="text-2xl font-bold mb-4">Project 1</h3>
+                    <p>Android Application</p>
+                </div>
+                <div class="project-card neu-border bg-[var(--google-blue)] p-6 text-white">
+                    <h3 class="text-2xl font-bold mb-4">Project 2</h3>
+                    <p>iOS Application</p>
+                </div>
+                <div class="project-card neu-border bg-[var(--google-green)] p-6 text-white">
+                    <h3 class="text-2xl font-bold mb-4">Project 3</h3>
+                    <p>WordPress Website</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="min-h-screen py-20 bg-[var(--google-red)]">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 text-white">Get in Touch</h2>
+            <div class="neu-border bg-white p-8 max-w-2xl mx-auto">
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label class="block text-lg mb-2">Name</label>
+                        <input type="text" class="w-full p-3 neu-border" required>
+                    </div>
+                    <div>
+                        <label class="block text-lg mb-2">Email</label>
+                        <input type="email" class="w-full p-3 neu-border" required>
+                    </div>
+                    <div>
+                        <label class="block text-lg mb-2">Message</label>
+                        <textarea class="w-full p-3 neu-border h-32" required></textarea>
+                    </div>
+                    <button type="submit" class="neu-border bg-[var(--google-blue)] text-white px-6 py-3">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="text-2xl hover:text-[var(--google-blue)]"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="text-2xl hover:text-[var(--google-red)]"><i class="bi bi-github"></i></a>
+                <a href="#" class="text-2xl hover:text-[var(--google-yellow)]"><i class="bi bi-twitter"></i></a>
+            </div>
+            <p>© 2023 Mayank Agrawal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animations
+        gsap.from(".skill-pill", {
+            duration: 1,
+            y: 100,
+            opacity: 0,
+            stagger: 0.1,
+            scrollTrigger: {
+                trigger: "#about",
+                start: "top center"
+            }
+        });
+
+        gsap.from(".project-card", {
+            duration: 1,
+            x: -100,
+            opacity: 0,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: "#projects",
+                start: "top center"
+            }
+        });
+
+        // Form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add form submission logic here
+            alert('Message sent successfully!');
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
